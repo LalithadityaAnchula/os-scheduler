@@ -1,0 +1,48 @@
+html {
+  scroll-behavior: smooth;
+}
+.card {
+  border-radius: 1rem;
+}
+.section {
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.is-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.title-container {
+  border-radius: 1rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+#priorityInput,
+#timeQuantaInput,
+td,
+tr {
+  animation: fadeInDown 0.7s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

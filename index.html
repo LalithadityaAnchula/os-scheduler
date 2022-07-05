@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OS Scheduler</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="box title-container has-background-primary-light">
+      <h1 class="title has-text-centered">
+        Scheduling Algorithms
+      </h1>
+    </div>
+  </section>
+  <main class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-middle">
+          <div class="control has-icons-left">
+            <div class="select is-large is-rounded">
+              <select id="chooseAlgo">
+                <option selected>FCFS</option>
+                <option>Priority Scheduling</option>
+                <option>SJF</option>
+                <option>LJF</option>
+                <option>Round Robin</option>
+              </select>
+            </div>
+            <span class="icon is-large is-left">
+              <i class="fas fa-globe"></i>
+            </span>
+          </div>
+        </div>
+        <div class="column">
+          <div class="container">
+            <form>
+              <div class="input-section" id="inputSection">
+                <div class="field">
+                  <label class="label">Arrival Times</label>
+                  <div class="control">
+                    <input id="arrivalTimes" class="input" type="text" placeholder="Text input" required>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="label">Burst Times</label>
+                  <div class="control">
+                    <input id="burstTimes" class="input" type="text" placeholder="Text input" required>
+                  </div>
+                </div>
+              </div>
+              <div class="field is-grouped is-grouped-centered mt-5">
+                <p class="control">
+                  <button type="reset" class="button is-danger">
+                    Reset
+                  </button>
+                </p>
+                <p class="control">
+                  <button type="button" class="button is-success" id="resultButton">
+                    Result
+                  </button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section dynamic">
+      <div class="box column is-12">
+        <div class="card-content table-container">
+          <table  id="gantt_table" class="table is-hoverable is-bordered container is-fullwidth">
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="container is-fluid dynamic">
+      <div class="box column is-12">
+        <div class="card-content table-container">
+          <table id="output_table" class="table is-hoverable is-bordered container is-fullwidth">
+          </table>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
